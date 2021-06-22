@@ -1,4 +1,4 @@
-public class String_Example
+public class String_Element
 {  
 public static void main(String args[])
 {  
