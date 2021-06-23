@@ -1,28 +1,39 @@
-public class String_Example
-{  
-public static void main(String args[])
-{  
-String s1="java";
-char ch[]={'s','t','r','i','n','g','s'};  
-String s2=new String(ch);
-String s3=new String("objectoriented");
-System.out.println(s2);  
-System.out.println(s3);  
-int length =s2.length();
-System.out.println("The length of the String \""+s2+"\" is: " +length);
-s2=s2.concat(" is immutable so assign it explicitly");  
-System.out.println(s2);
-char s=s1.charAt(2);
-System.out.println(s);
-System.out.println(s1.compareTo(s2));
-int firstIndex = s2.indexOf('s');
-System.out.println("First occurrence of char 's'" + " is found at : " + firstIndex);
-int lastIndex = s2.lastIndexOf('s');
-System.out.println("Last occurrence of char 's' is" + " found at : " + lastIndex);
-String s4="javatpoint is a very good website";  
-String replaceString=s4.replace('a','e'); 
-System.out.println(replaceString); 
-String  sample = String.valueOf(ch, 0, 3);
-System.out.println(sample);
-}
+import java.util.Scanner;
+public class Search_Element
+{
+    public static void main(String[] args) 
+    {
+        int n, x, flag = 0, i = 0;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter no. of elements you want in array:");
+        n = s.nextInt();
+        int a[] = new int[n];
+        System.out.println("Enter all the elements:");
+        for(i = 0; i < n; i++)
+        {
+            a[i] = s.nextInt();
+        }
+        System.out.print("Enter the element you want to find:");
+        x = s.nextInt();
+        for(i = 0; i < n; i++)
+        {
+            if(a[i] == x)
+            {
+                flag = 1;
+                break;
+            }
+            else
+            {
+                flag = 0;
+            }
+        }
+        if(flag == 1)
+        {
+            System.out.println("Element found at position:"+(i + 1));
+        }
+        else
+        {
+            System.out.println("Element not found");
+        }
+    }
 }
